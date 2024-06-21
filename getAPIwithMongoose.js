@@ -8,6 +8,7 @@ app.use(express.json());
 
 app.get('/', async (req, resp)=>{
     let data = await Product.find({name: 'NikeA2'});
+    resp.send(data);
     console.log(data);
     resp.send("Yogi maharaj ki jai");
 })
